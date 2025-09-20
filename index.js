@@ -296,7 +296,7 @@ if (senderNumber.includes("923235906096") && !isReact) {
   //==========public react============//
   
 // Auto React for all messages (public and owner)
-if (!isReact && config.AUTO_REACT === 'true') {
+if (!isReact && config.AUTO_REACT === 'false') {
     const reactions = [
         '🌼', '❤️', '💐', '🔥', '🏵️', '❄️', '🧊', '🐳', '💥', '🥀', '❤‍🔥', '🥹', '😩', '🫣', 
         '🤭', '👻', '👾', '🫶', '😻', '🙌', '🫂', '🫀', '👩‍🦰', '🧑‍🦰', '👩‍⚕️', '🧑‍⚕️', '🧕', 
@@ -322,7 +322,7 @@ if (!isReact && config.AUTO_REACT === 'true') {
 // custum react settings        
                         
 // Custom React for all messages (public and owner)
-if (!isReact && config.CUSTOM_REACT === 'true') {
+if (!isReact && config.CUSTOM_REACT === 'false') {
     // Use custom emojis from the configuration (fallback to default if not set)
     const reactions = (config.CUSTOM_REACT_EMOJIS || '🥲,😂,👍🏻,🙂,😔').split(',');
     const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];

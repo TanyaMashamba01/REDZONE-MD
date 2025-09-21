@@ -287,15 +287,9 @@ let isCreator = [udp, ...qadeer, ...dev]
 				}
 
           
-// custum react settings        
+// By Qadeer-ai         
                         
-// Custom React for all messages (public and owner)
-if (!isReact && config.CUSTOM_REACT === 'false') {
-    // Use custom emojis from the configuration (fallback to default if not set)
-    const reactions = (config.CUSTOM_REACT_EMOJIS || '🥲,😂,👍🏻,🙂,😔').split(',');
-    const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
-    m.react(randomReaction);
-}
+
         
   //==========WORKTYPE============ 
   if(!isOwner && config.MODE === "private") return

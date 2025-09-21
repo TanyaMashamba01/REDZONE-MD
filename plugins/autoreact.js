@@ -4,18 +4,16 @@ const path = require('path');
 
 cmd({
   pattern: "autoreact",
-  desc: "Enable or disable AutoReact system",
-  category: "owner",
+  desc: "Enable or disable AutoReact system (anyone can use)",
+  category: "general",
   use: "<on/off>"
-}, async (conn, m, { text, isOwner }) => {
+}, async (conn, m, { text }) => {
   try {
-    if (!isOwner) return m.reply("❌ Only the bot owner can use this command!");
-
-    if (!text) return m.reply("⚙️ Use: *.autoreact on* or *.autoreact off*");
+    if (!text) return m.reply("⚙️ Use: .autoreact on or .autoreact off");
 
     const value = text.trim().toLowerCase();
     if (value !== "on" && value !== "off") {
-      return m.reply("⚙️ Use: *.autoreact on* or *.autoreact off*");
+      return m.reply("⚙️ Use: .autoreact on or .autoreact off");
     }
 
     // Path to config.env
@@ -25,20 +23,19 @@ cmd({
     if (value === "on") {
       if (envFile.includes("AUTO_REACT=false")) {
         envFile = envFile.replace("AUTO_REACT=false", "AUTO_REACT=true");
-      } else if (!envFile.includes("AUTO_REACT=")) {
+      } else if (!envFile.includes("AUTO_REACT")) {
         envFile += "\nAUTO_REACT=true";
       }
       m.reply("✅ AutoReact has been *ENABLED*");
     } else {
       if (envFile.includes("AUTO_REACT=true")) {
         envFile = envFile.replace("AUTO_REACT=true", "AUTO_REACT=false");
-      } else if (!envFile.includes("AUTO_REACT=")) {
+      } else if (!envFile.includes("AUTO_REACT")) {
         envFile += "\nAUTO_REACT=false";
       }
       m.reply("🚫 AutoReact has been *DISABLED*");
     }
 
-    // Save back to config.env
     fs.writeFileSync(envPath, envFile, 'utf8');
 
     // Update current session env

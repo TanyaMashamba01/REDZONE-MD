@@ -1,27 +1,51 @@
-const fs = require("fs");
-const settingsPath = "./settings.json";
+const { cmd } = require('../command');
+const fs = require('fs');
+const path = require('path');
 
-module.exports = {
-  name: "autoreact",
-  alias: ["ar"],
-  desc: "Toggle AutoReact On/Off",
-  type: "config",
-  exec: async (sock, m, args) => {
-    try {
-      let settings = JSON.parse(fs.readFileSync(settingsPath, "utf8"));
-      if (args[0] === "on") {
-        settings.AUTO_REACT = true;
-      } else if (args[0] === "off") {
-        settings.AUTO_REACT = false;
-      } else {
-        return m.reply("❌ Usage: .autoreact on / off");
-      }
+const settingsPath = path.join(__dirname, '../settings.json');
 
-      fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2));
-      m.reply(`✅ AutoReact is now *${settings.AUTO_REACT ? "ON" : "OFF"}*`);
-    } catch (e) {
-      console.error(e);
-      m.reply("❌ Error while toggling AutoReact!");
-    }
+// Function to load settings
+function loadSettings() {
+  try {
+    return JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
+  } catch (e) {
+    return { AUTO_REACT: true }; // default
   }
-};
+}
+
+// Function to save settings
+function saveSettings(data) {
+  fs.writeFileSync(settingsPath, JSON.stringify(data, null, 2));
+}
+
+cmd({
+  pattern: "autoreact",
+  desc: "Enable or disable AutoReact system",
+  category: "general",
+  use: "<on/off>"
+}, async (conn, m, { text }) => {
+  try {
+    if (!text) return m.reply("⚙️ Use: *.autoreact on* or *.autoreact off*");
+
+    const value = text.trim().toLowerCase();
+    if (value !== "on" && value !== "off") {
+      return m.reply("⚙️ Use: *.autoreact on* or *.autoreact off*");
+    }
+
+    let settings = loadSettings();
+    settings.AUTO_REACT = value === "on" ? true : false;
+    saveSettings(settings);
+
+    if (settings.AUTO_REACT) {
+      m.reply("✅ AutoReact has been *ENABLED*");
+    } else {
+      m.reply("🚫 AutoReact has been *DISABLED*");
+    }
+
+  } catch (e) {
+    console.error(e);
+    m.reply("❌ Error while toggling AutoReact!");
+  }
+});
+
+module.exports = {};

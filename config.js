@@ -5,17 +5,17 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "",
+SESSION_ID: process.env.SESSION_ID || "QADEER-AI~eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoid0VWbnFTVkFLS0RtOExLOVB3ZFV5TEt4cGhsMXg2RWVSN1JnYUlzMHltaz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiUVA3R2IvL1JnV205UXY3WTNTbzJYUHhpK3NtM0hqN0NBUjhUOE4xclB3TT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJBQ3U5QnhMcWtUeUtFS3didjlnOVFvMFhqYytwTlErY1FBYjNBMit3czF3PSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJnRk5WYlQvRmJJRWJsSFZHN2haR2NsMU03S1pnOVdSLzhJdlp4N0lxa0Q4PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImdORTFPZmdLU3RLRVBkUTg2U0paY3ZPeG5JSXhKNGp1SE44VjBoSkMwWEU9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Ik5EczFEdHlNbWhtNXl0OCtjQm5GRHM4Qk9qZGh6aUVnR3g1R2g3SldZVUk9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiY0hsNDVBWmlzcVNkQUJ5blAzdmdOSXVNNVdWZzE3Y0lxNGZWendLdVYyYz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiZW53V1pFaWo1VC9JeHM1bzYyMHZ2RFlOYm44S253RG5nR25rUkxSRDNWQT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6InF6T1Y3dGpXdjJkNldIdGJFZDFjbXYvRHdtY0VHRmZYWkl3ZWFmVy9RTTIxb0l6K1l0OUkxWDh0Z2lqNFhvam5vdktNN0Y2eUxjQ2JrUUM3MlV2amhBPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6OTAsImFkdlNlY3JldEtleSI6IjdZYmdBWEN2TDJHQVNoTlBHQm1VamRaS3ZnL0FQbzMwd2wwaWdHdnhkQTA9IiwicHJvY2Vzc2VkSGlzdG9yeU1lc3NhZ2VzIjpbXSwibmV4dFByZUtleUlkIjozMSwiZmlyc3RVbnVwbG9hZGVkUHJlS2V5SWQiOjMxLCJhY2NvdW50U3luY0NvdW50ZXIiOjAsImFjY291bnRTZXR0aW5ncyI6eyJ1bmFyY2hpdmVDaGF0cyI6ZmFsc2V9LCJyZWdpc3RlcmVkIjp0cnVlLCJwYWlyaW5nQ29kZSI6IjZKRVJKMkJXIiwibWUiOnsiaWQiOiIyNjM3MTY3MjkyMjI6NjNAcy53aGF0c2FwcC5uZXQiLCJsaWQiOiIxMDg4MzQ2NTU4NzUxMTE6NjNAbGlkIn0sImFjY291bnQiOnsiZGV0YWlscyI6IkNJaVRoKzBCRUl1TWk4Y0dHQU1nQUNnQSIsImFjY291bnRTaWduYXR1cmVLZXkiOiJObnNITWwyL256VndIdGxNbGEzeHdWT0dmSlRFelBKL21QQ0JadFhjekNnPSIsImFjY291bnRTaWduYXR1cmUiOiIwMjJYRXpYb2hNRzZPTXg1RmsxaFg1UWJQc0JBWUQ5MWVobTdqOFllQUt4OVMyeGNIczJNUURKdTBXY2FCc2NzU2I2aVB5cERjanMxK2hGN3FxRlVEQT09IiwiZGV2aWNlU2lnbmF0dXJlIjoidEZJQmVDWkVaak5WTHJkbFlZUmtVQ2MzLzN0NHNFR1RqdDc1SFVudURqeldVNkZrUUJRcUVITzZjS1YyOXJ1SDFmeCt3Qno3bnRDVWFtNjF2Wnd0aFE9PSJ9LCJzaWduYWxJZGVudGl0aWVzIjpbeyJpZGVudGlmaWVyIjp7Im5hbWUiOiIyNjM3MTY3MjkyMjI6NjNAcy53aGF0c2FwcC5uZXQiLCJkZXZpY2VJZCI6MH0sImlkZW50aWZpZXJLZXkiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJCVFo3QnpKZHY1ODFjQjdaVEpXdDhjRlRobnlVeE16eWY1andnV2JWM013byJ9fV0sInBsYXRmb3JtIjoiYW5kcm9pZCIsInJvdXRpbmdJbmZvIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQ0FJSUVnPT0ifSwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzU5NjkyMzAzLCJsYXN0UHJvcEhhc2giOiIzZ1BVSmsifQ==",
 // add your Session Id 
-AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
+AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "false",
 // make true or false status auto seen
 AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
 // make true if you want auto reply on status 
-AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
+AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
 // make true if you want auto reply on status 
-AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY REDZONE-MD 🇵🇰*",
+AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*SEEN YOUR STATUS BY LEADER-MD-MD 🇵🇰*",
 // set the auto reply massage on status reply  
-ANTI_DELETE: process.env.ANTI_DELETE || "false",
+ANTI_DELETE: process.env.ANTI_DELETE || "true",
 // set true false for anti delete     
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "inbox", 
 // change it to 'same' if you want to resend deleted message in same chat     
@@ -23,17 +23,17 @@ WELCOME: process.env.WELCOME || "false",
 // true if want welcome and goodbye msg in groups    
 ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
-ANTI_LINK: process.env.ANTI_LINK || "true",
+ANTI_LINK: process.env.ANTI_LINK || "false",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
-MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/l8psgf.jpg",
+MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/7svy43.jpeg",
 // add custom menu and mention reply image url
-PREFIX: process.env.PREFIX || ".",
+PREFIX: process.env.PREFIX || "*",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "REDZONE-MD",
+BOT_NAME: process.env.BOT_NAME || "LEADER-MD",
 // add bot namw here for menu
-AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
+AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
 // true to get auto status react
 STICKER_NAME: process.env.STICKER_NAME || "REDZONE-MD",
 // type sticker pack name 
@@ -43,15 +43,15 @@ CUSTOM_REACT_EMOJIS: process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️�
 // chose custom react emojis by yourself 
 DELETE_LINKS: process.env.DELETE_LINKS || "false",
 // automatic delete links witho remove member 
-OWNER_NUMBER: process.env.OWNER_NUMBER || "923235906096",
+OWNER_NUMBER: process.env.OWNER_NUMBER || "263716729222",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "QADEERxNOMI",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝙾𝙼𝙸𝚡𝚀𝙰𝙳𝙴𝙴𝚁*",
+DESCRIPTION: process.env.DESCRIPTION || "*©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 Joshuamambo1*",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/l8psgf.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/7svy43.jpeg",
 // add img for alive msg
-LIVE_MSG: process.env.LIVE_MSG || "> I'm alive*REDZONE-MD*🇵🇰",
+LIVE_MSG: process.env.LIVE_MSG || "> I'm alive*TELKingE-MD*🙏🇿🇼",
 // add alive msg here 
 READ_MESSAGE: process.env.READ_MESSAGE || "false",
 // Turn true or false for automatic read msgs
@@ -75,7 +75,7 @@ AUTO_TYPING: process.env.AUTO_TYPING || "false",
 // true for automatic show typing   
 READ_CMD: process.env.READ_CMD || "false",
 // true if want mark commands as read 
-DEV: process.env.DEV || "923235906096",
+DEV: process.env.DEV || "263716729222",
 //replace with your whatsapp number        
 ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
